@@ -1,43 +1,38 @@
-package days16;
+package days17;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class CUTOperation {
+public class CUTOperation2 {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
-		int b = scanner.nextInt();
-		int a[] = new int [b];
+		int n = scanner.nextInt();
+		int sticks [] = new int[n];
+		int sticksLength = sticks.length;
 		
-		for (int i = 0; i < a.length; i++) {
-			a[i] = scanner.nextInt();
-		}
-		Arrays.sort(a);
-		int min = a[0];
-		int count =b;
-			while (count >0) {
-				
-				for (int i = 0; i < a.length; i++) {
-					System.out.println(count);
-					if (a[i] - min < 0) {
-						count--;
-						continue;
-						}
-					else {
-						a[i] -= min;
-						}
-					
-				} //for
-				
-			}
+		for (int i = 0; i < sticksLength ; i++) {
+			sticks[i] = scanner.nextInt();
+		} //for
+		
+		Arrays.sort(sticks);
+		System.out.println(Arrays.toString(sticks));
+		
+		int index = 0;
+		int sticksCount = sticksLength - index;
+		System.out.println(sticksCount);
+		
+		for (int i = 0; i < sticksLength; i++) {
+			if (sticks[index] != sticks[i]) {
+				index = i;
+				sticksCount = sticksLength - index;
+				System.out.println(sticksCount);
+			} //if
 			
+			
+		} //for
 		
-		
-//		while (n == 0) {
-//			
-//		}
 	} //main
 }
 
@@ -49,7 +44,7 @@ public class CUTOperation {
  이 막대기들 중 가장 짧은 막대기의 길이로 모든 막대기를 자르는 것을 [cut operation]이라고 하자.
 
 예를 들어 6개의 막대기가 있고 그 길이가 다음과 같다면 
-
+6
 5 4 4 2 2 8 
 
 이 경우 [Cut Operation]을 한번 수행하면 다음과 같다. 

@@ -1,9 +1,10 @@
 package days16;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Ex15 {
+public class Ex15_02 {
 	// 개발자가 고의로 예외 발생시키기
 			/*
 			 * 1. new 예외 클래스()
@@ -19,10 +20,14 @@ public class Ex15 {
 		//Unhandled exception type IOException
 		// System.in.read();
 		
-		//unchecked 예외
-		int kor = getScore();
+		//unchecked 예외 -- >checked 예외로 바뀜
+		//why? unChecked 예외 - > RuntimeException 상속
+		// checked 예외 > IOException 상속
+//		int kor = getScore();
 		
-		System.out.println(kor);
+		
+		
+//		System.out.println(kor);
 		/*
 		try {
 			
@@ -37,7 +42,7 @@ public class Ex15 {
 		
 	} //main
 
-	public static int getScore() throws InputMismatchException{
+	public static int getScore() throws IOException{
 		
 		Scanner scanner = new Scanner(System.in);
 		int score;
@@ -50,7 +55,7 @@ public class Ex15 {
 			score = Integer.parseInt(input);
 			return score;
 		}else {
-			throw new InputMismatchException("점수를 벗어났다.");
+			throw new IOException("점수를 벗어났다.");
 		}
 		
 	}
