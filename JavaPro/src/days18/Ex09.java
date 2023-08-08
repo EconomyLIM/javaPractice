@@ -4,7 +4,7 @@ public class Ex09 {
 	public static void main(String[] args) {
 		//					StringBuffer, String Builder 클래스
 		// 멀티스레드			안전x			안전o
-		// 동기화 처리			x				o	
+		// 동기화 처리			o				x	
 		
 		//위의 두 클래스 언제 사용하는가? -> String 변경 불가능한 클래스, 변경 가능한 클래스 (문자열 속 - 삽입, 수정, 추가)
 		// 객체 생성이 라인수 만큼 생성되어 지고 있다 -> 좋은 코딩 x

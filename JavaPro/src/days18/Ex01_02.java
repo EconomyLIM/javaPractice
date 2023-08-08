@@ -8,7 +8,7 @@ import java.util.Comparator;
 import days15.Temp;
 
 public class Ex01_02 {
-	public static void main(String[] args) {
+		public static void main(String[] args) {
 		String [] names = {
 				"김호영", "박정호", "주강민", "김정주", "고경림"
 		};

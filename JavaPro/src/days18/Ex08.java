@@ -45,8 +45,8 @@ public class Ex08 {
 		String url ="www.maver.com/test.jsp";
 		String suffix = ".jsp"; // 접미사
 		rrn.endsWith(suffix);
-//		System.out.println(url.startsWith(prefix) );
-//		System.out.println(url.endsWith(prefix) );
+		System.out.println(url.startsWith("www") );
+		System.out.println(url.endsWith(suffix) );
 		
 	} //main
 }
