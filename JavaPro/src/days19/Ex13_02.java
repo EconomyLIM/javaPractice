@@ -14,17 +14,22 @@ public class Ex13_02 {
 
 		Date today = new Date(System.currentTimeMillis());
 	    Date temp = new Date(today.getYear(), today.getMonth(), today.getDate());
-
+	    
 		Date d = new Date(year-1900, month-1, 1); // 2023.08.01
 		int date = d.getDate() - dayOfWeek;
 		d.setDate(date);
-
+		System.out.println(d.toString());
+		System.out.println(temp.toLocaleString());
+		System.out.println(today.toLocaleString());
+		System.out.println(today.toString().substring(0, 11).equals(temp.toString().substring(0,11)));
+		
 
 
 		for (int i = 1; i <= 42; i++) {
 			int m = d.getMonth() +1;
 			 int date2 = d.getDate();
 			 System.out.printf(m != month ? "(%d)\t" : (d.compareTo(temp) == 0 ? "[%d]\t" : "%d\t"), d.getDate());
+			 
 			// d.after
 			// d.before
 			// d.equals
