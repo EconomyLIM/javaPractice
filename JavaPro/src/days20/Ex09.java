@@ -17,12 +17,12 @@ public class Ex09 {
 		double[] limits = {0,60,70,80,90};
 		String[] formats = {"가", "양", "미", "우", "수" };
 		ChoiceFormat cf = new ChoiceFormat(limits, formats);
-		
+		*/
 		int []kors = {100,67, 23, 99};
 		for (int i = 0; i < kors.length; i++) {
 			System.out.printf("%d -> %s등급\n", kors[i], cf.format(kors[i]));
 		} //for
-		*/
+		
 		
 		
 	}

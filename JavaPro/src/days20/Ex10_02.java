@@ -10,9 +10,13 @@ public class Ex10_02 {
 		String pattern = "이름:{0}, 나이: {1}, 성별: {2}";
 		MessageFormat mf = new MessageFormat(pattern);
 		Object[] objs = mf.parse(source);
-		for (Object obj : objs) {
-			System.out.println(obj);
-		}
+//		for (Object obj : objs) {
+//			System.out.println(obj);
+//		}
+		for (int i = 0; i < objs.length; i++) {
+			System.out.println(objs[i]);
+		} //for
+		
 //		String name = "이준희";
 //		int age= 20;
 //		boolean gender = true;

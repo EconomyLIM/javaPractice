@@ -21,7 +21,7 @@ public class Ex03 {
 //		} //for
 	} //main
 
-	private static void dispDiffDays(Date sday, Date eday) {
+	public static void dispDiffDays(Date sday, Date eday) {
 		long diff = sday.getTime() - eday.getTime();
 		long mok = diff/(1000*60*60*24);
 		System.out.printf("%dd-",mok);
@@ -43,7 +43,7 @@ public class Ex03 {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		dispDiffDays(sday, new Date());
+//		dispDiffDays(sday, new Date());
 	}
 	
 }
