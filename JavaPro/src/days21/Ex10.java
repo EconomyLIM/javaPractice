@@ -39,7 +39,8 @@ public class Ex10 {
 		Duration d = Duration.between(st, nt);
 		long ss = d.getSeconds();
 		System.out.println(ss/(60*60));
-		System.out.println(ss%(60*60));
+		ss %= (60*60);
+		System.out.println();
 		
 //		long b =  d.get(ChronoUnit.HOURS);
 //		System.out.println(b); //java.time.temporal.UnsupportedTemporalTypeException: 

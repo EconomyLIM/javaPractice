@@ -2,7 +2,11 @@ package days21;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -55,16 +59,33 @@ public class Ex15 {
 			Student s = new Student(no++, name, kor, eng, mat, tot, avg, rank, rank);  
 			
 			list.add(s);
-			 
 			// 입력 계속 ? y 
 			System.out.print("> 학생 입력 계속 ?");
 			con = (char)System.in.read(); // checked 예외
 			System.in.skip(System.in.available());
 		} while (Character.toUpperCase(con) == 'Y');
-
 		// [문제]
-		// 1. 등수처리
-		// 2. 성적순으로 오름차순 정렬
+				// 1. 등수처리
+		Student s1 ,s2;
+	      for (int i = 0; i < list.size(); i++) {
+	         s1 = (Student)list.get(i);
+	         for (int j = 0; j < list.size(); j++) {
+	            s2 = (Student)list.get(j);
+	            if(s1.getTot() < s2.getTot()) {
+	               s1.setRank(s1.getRank() + 1);
+	            }
+	         } // for
+	      } // for
+	      
+	      list.sort(new Comparator<Student>() {
+
+	         @Override
+	         public int compare(Student o1, Student o2) {
+	            
+	            return o1.getRank() - o2.getRank();
+	         }
+	      });
+				// 2. 성적순으로 오름차순 정렬
 		
 		// 모든 학생 출력
 		System.out.println("> 입력받은 학생수 : " + list.size());
@@ -93,8 +114,6 @@ public class Ex15 {
 	public static int getScore() {		 
 		return (int)(Math.random()*101);
 	}
- 
-	 
 
 } // class
 

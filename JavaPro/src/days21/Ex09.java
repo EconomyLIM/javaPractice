@@ -45,7 +45,7 @@ public class Ex09 {
 		// OrSame 오늘 포함
 		System.out.println(ld.with( previousOrSame(DayOfWeek.TUESDAY) ));
 		
-		// 다음주 금요일 휴강
+		// 다음주 금요일 
 		System.out.println( ld.with(next(DayOfWeek.FRIDAY)) );
 		System.out.println( ld.with(nextOrSame(DayOfWeek.FRIDAY)) );
 		
