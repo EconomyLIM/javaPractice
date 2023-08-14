@@ -12,7 +12,7 @@ public class Ex07 {
 		// 		ㄴ 순서유지 중복허용
 		//		ㄴ ArrayList와 동일
 		//		차이점-> Vector은 멀티스레드에 안전(동기화 처리)
-		// 		StringBuilder : 멀티스레드에 ㅌx 동기화 처리 x
+		// 		StringBuilder : 멀티스레드에 x 동기화 처리 x
 		// 		StringBuffer : 멀티스레드에 o 동기화처리 o
 		
 		Vector vector = new Vector();
