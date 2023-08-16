@@ -59,7 +59,7 @@ public class Ex08 {
    private static void addPhoneNo(String groupName, String name, String tel) {
       
       groupName = (  groupName == null ? "기타" : groupName  );
-      
+                       
       addGroup(  groupName );  
 
       HashMap<String, String>  group = phoneBook.get(groupName);

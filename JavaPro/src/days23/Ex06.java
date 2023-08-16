@@ -30,6 +30,7 @@ public class Ex06 {
 		 /*
 		  * 해시테이블 
 		  */
+		
 		hm.put("admin", "관리자");
 		hm.put("hong", "홍길동");
 
