@@ -4,8 +4,6 @@ public class Ex09 {
 	public static void main(String[] args) {
 		// [제네릭스의 제한]
 
-
-
 	} //main
 }
 

@@ -37,6 +37,7 @@ public class Ex03 {
 		switch (selectedNumber) {
 		case 1:
 			add(m);
+			Ex02 ex02 = new Ex02();
 			break;
 		case 2:
 			System.out.println("배열에 요소 수정");
